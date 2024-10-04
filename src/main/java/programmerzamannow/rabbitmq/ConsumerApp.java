@@ -28,7 +28,7 @@ public class ConsumerApp {
       System.out.println("Consumer is canceled");
     };
 
-    channel.basicConsume("whatsapp", true, deliverCallback, cancelCallback);
+    channel.basicConsume("whatsupp", true, deliverCallback, cancelCallback);
 
 //    channel.close();
 //    connection.close();

@@ -20,13 +20,13 @@ public class ProducerApp {
     Channel channel = connection.createChannel();
 
     for (int i = 0; i < 10; i++) {
-      String message = "Whatsapp " + i;
+      String message = "whatsupp " + i;
 
       AMQP.BasicProperties properties = new AMQP.BasicProperties().builder()
           .headers(Map.of("sample", "value"))
           .build();
 
-      channel.basicPublish("notification", "whatsapp", properties, message.getBytes());
+      channel.basicPublish("notification", "whatsupp", properties, message.getBytes());
     }
 
     channel.close();
